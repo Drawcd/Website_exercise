@@ -1,0 +1,245 @@
+.header{
+  height:101px;
+  border-top:2px solid #161f32;
+}
+
+.inner-box{
+  width:1170px;
+  margin:0 auto;
+}
+
+.inner-box:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.logo{
+  float:left;
+  margin-top:32px;
+}
+
+.logo-link{
+  display:block;
+  width:122px;
+  height:30px;
+  background:url(../images/logo_artica.gif) no-repeat;
+  text-indent:-99999px;
+}
+
+.btn-menu-toggle{
+  float:right;
+  width:26px;
+  height:23px;
+  background:url(../images/btn_show_menu.gif) no-repeat;
+  text-indent:-99999px;
+  border:0;
+  margin-top:39px;
+}
+
+.gnb{
+  width:302px;
+  height:100%;
+  padding-left:38px;
+
+  position:fixed;
+  top:0;
+  right:-340px;
+  background:#161f32;
+}
+
+.gnb-heading{
+  font-family: 'Molle', cursive;
+  font-size:37px;
+  color:#fff;
+  margin-left:4px;
+  margin-top:59px;
+}
+
+.gnb-list{
+  margin-top:50px;
+}
+
+.gnb-item{
+  margin-bottom:19px;
+}
+
+.gnb-link{
+  font-weight:300;
+  font-size:20px;
+  color:#fff;
+}
+
+.btn-menu-close{
+  width:12px;
+  height:12px;
+  background:url(../images/btn_close_menu.png) no-repeat;
+  border:0;
+  text-indent:-99999px;
+
+  position:absolute;
+  top:59px;
+  right:53px;
+
+  /* mouse cursor 모양 바꾸기 */
+  cursor: pointer;
+}
+
+/* 공통(common) css */
+.contents{
+  text-align:center;
+  padding-top:65px;
+  box-sizing:border-box;
+}
+
+.heading-section{
+  font-size:30px;
+}
+
+.heading-section.logo-type{
+  font-family:Molle, cursive;
+  font-size:52px;
+  color:#fff;
+  margin-bottom:47px;
+}
+
+.heading-section.dark{
+  color:#3d506f;
+}
+
+.heading-section.white{
+  color:#fff;
+}
+
+.heading-section-sub{
+  font-size:20px;
+  margin-top:17px;
+}
+
+.heading-section-sub.white{
+  color:#fff;
+}
+
+.hr-line{
+  margin-top:30px;
+  position:relative;
+}
+
+.hr-line.dark:before{
+  content:"";
+  display:block;
+  width:571px;
+  height:1px;
+  background:#7f90a5;
+  margin:0 auto 30px;
+}
+
+.hr-line.dark:after{
+  content:"";
+  display:block;
+
+  width:23px;
+  height:16px;
+  background:#fff url(../images/hr_line_circle_dark.png) no-repeat center;
+
+  position:absolute;
+  top:-8px;
+  left:50%;
+  margin-left:-12px;
+}
+
+.hr-line.white:before{
+  content:"";
+  display:block;
+  width:571px;
+  height:1px;
+  background:#fff;
+  margin:0 auto 30px;
+}
+
+.hr-line.white:after{
+  content:"";
+  display:block;
+
+  width:23px;
+  height:16px;
+  background:#222c40 url(../images/hr_line_circle_white.png) no-repeat center;
+
+  position:absolute;
+  top:-8px;
+  left:50%;
+  margin-left:-12px;
+}
+
+.paragraph{
+  line-height:1.4;
+}
+
+.paragraph.white{
+  color:#fff;
+}
+
+.paragraph.big{
+  font-size:25px;
+  font-weight:300;
+}
+
+.btn-link{
+  width:173px;
+  height:53px;
+  box-sizing:border-box;
+  color:#fff;
+  display:block;
+  line-height:53px;
+}
+
+.btn-link.center{
+  margin:35px auto 0;
+}
+
+.btn-link.white{
+  border:1px solid #fff;
+}
+
+.btn-link.dark{
+  background:#3d506f;
+}
+
+/* 전용 css */
+.mt20{
+  margin-top:20px;
+}
+.mt35{
+  margin-top:35px;
+}
+
+.fc-white{
+  color:#fff;
+}
+
+/* 영역별 css */
+.section1{
+  background:#546279;
+  height:700px;
+}
+
+.section1>.inner-section{
+  background:#222c40;
+  height:311px;
+  position:relative;
+  top:105px;
+  padding-top:43px;
+}
+
+.section3{
+  height:240px;
+  background:#1d263a;
+}
+
+.section5{
+  background:#222c40;
+}
+
+.section8{
+  background:#161f32;
+}

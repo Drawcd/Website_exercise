@@ -1,95 +1,459 @@
 .header {
-  height:101px;
-  border-bottom:2px solid #161f31;
+  height: 101px;
+  border-top: 2px solid #161f32;
 }
 
 .inner-box {
-  width:1170px;
-  margin:0 auto;
+  width: 1170px;
+  margin: 0 auto;
 }
-.inner-box:after{
-  content:"";
-  displlay:block;
-  clear:both;
+
+.inner-box:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .logo {
-  /*vertical-align: middle;*/
-  float:left;
-  line-height: 100px;
+  float: left;
+  margin-top: 32px;
   /*float를 사용하면 자동적으로 block요소로 바뀐다.*/
 }
 
 .logo-link {
-  background:url(../images/art_logo.png) no-repeat;
-  width:122px;
-  height:30px;
-  text-indent:-9999px;
-  display:inline-block;
-  vertical-align: middle;
-}
-
-.wrap-btn-menu-toggle {
-  /*height:101px;*/
-  line-height:101px;
-  float:right;
-  vertical-align: middle;
+  display: block;
+  width: 122px;
+  height: 30px;
+  background: url(../images/art_logo.png) no-repeat;
+  text-indent: -9999px;
 }
 
 .btn-menu-toggle {
-  width:26px;
-  height:23px;
-  background:url(../images/menu_icon.png) no-repeat;
-  text-indent:-9999px;
+  float: right;
+  width: 26px;
+  height: 23px;
+  background: url(../images/menu_icon.png) no-repeat;
+  text-indent: -9999px;
   border: 0;
   /*일반적으로 테두리 없애고자할때 none 보다는 수치0으로 입력한다.*/
+  margin-top: 39px;
 }
 
 .gnb {
-  width:302px;
-  height:100%;
-  padding-left:38px;
-
-  position:fixed;
-  background:#161f31;
-  top:0;
-  right:0;
+  width: 302px;
+  height: 100%;
+  padding-left: 38px;
+  position: fixed;
+  top: 0;
+  right: -340px;
+  background: #161f31;
 }
 
 .gnb-heading {
   font-family: 'Molle', cursive;
-  font-size:37px;
-  color:#fff;
-  margin-left :4px;
-  margin-top :59px;
-
+  font-size: 37px;
+  color: #fff;
+  margin-left: 4px;
+  margin-top: 59px;
 }
 
-
 .gnb-list {
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 .gnb-item {
-  margin-bottom:19px;
+  margin-bottom: 19px;
 }
 
 .gnb-link {
-  font-weight:300;
-  color:#fff;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
 }
 
 .btn-menu-close {
-  width:14px;
-  height:14px;
-  background:url(../images/btn_close.png) no-repeat;
-  border:0;
-  text-indent:-9999px;
+  width: 14px;
+  height: 14px;
+  background: url(../images/btn_close.png) no-repeat;
+  border: 0;
+  text-indent: -9999px;
+  position: absolute;
+  top: 59px;
+  right: 53px;
+  /*링크 롤오버시 마우스 커서 변경*/
+  cursor: pointer;
+}
 
+
+/* (common)공동 영역 */
+
+.contents {
+  text-align: center;
+  padding-top: 65px;
+  box-sizing: border-box;
+}
+
+.heading-section {
+  font-size: 30px;
+}
+
+.heading-section.logo-type {
+  font-family: "Molle", "cursive";
+  font-size: 52px;
+  color: #fff;
+  margin-bottom: 47px;
+}
+
+.heading-section.dark {
+  color: #3d506f;
+}
+
+.heading-section.white {
+  color: #fff;
+}
+
+.heading-section-sub {
+  font-size: 20px;
+  margin-top: 17px;
+}
+
+.heading-section-sub.white {
+  color: #fff;
+}
+
+.hr-line {
+  margin-top: 30px;
+  position: relative;
+}
+
+.hr-line.mt45:before {
+  /*!important 키워드 : 우선순위를 가장 높게 해줌*/
+  margin: 0 auto 45px !important;
+}
+
+.hr-line.dark:before {
+  content: "";
+  display: block;
+  width: 571px;
+  height: 1px;
+  background: #7f90a5;
+  margin: 0 auto 30px;
+}
+
+.hr-line.dark:after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 20px;
+  background: #fff url(../images/hr_line_clrcle_dark.png) no-repeat center;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -13px;
+}
+
+.hr-line.white:before {
+  content: "";
+  display: block;
+  width: 571px;
+  height: 1px;
+  background: #fff;
+  margin: 0 auto 30px;
+}
+
+.hr-line.white:after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 20px;
+  background: #222c40 url(../images/hr_line_clrcle_white.png) no-repeat center;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -13px;
+}
+
+.paragraph {
+  line-height: 1.4;
+}
+
+.paragraph.white {
+  color: #fff;
+}
+
+.paragraph.big {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.btn-link {
+  width: 173px;
+  height: 53px;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  line-height: 53px;
+}
+
+.btn-link.center {
+  margin: 35px auto 0px;
+}
+
+.btn-link.white {
+  border: 1px solid #fff;
+}
+
+.btn-link.dark {
+  background: #3d506f;
+}
+
+
+/* 전용 Css */
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt35 {
+  margin-top: 35px;
+}
+
+.fc-white {
+  color: #fff;
+}
+
+.paragraph.italic {
+  font-style: italic;
+}
+
+
+/* 영역별 CSS */
+
+.section1 {
+  background: #546278;
+  height: 700px;
+}
+
+.section1>.inner-section {
+  background: #222c40;
+  height: 311px;
+  position: relative;
+  top: 105px;
+  /*margin-top을 사용할때 겸침 현상으로 margin을 사용 할 수 없을때 position:relative를 이용하고 margin 대신 top을 사용한다.*/
+  padding-top: 43px;
+}
+
+
+/*parent요소에 margin-top 속성을 적용 했을때, margin 겹침이 발생되서 child 요소의 margin이 pargin처럼 표현됨*/
+
+
+/*해결 방법*/
+
+
+/*1.parent요소에 float요소에 float속성을 적용*/
+
+
+/*2.parent요소에 position:abolute 적용 */
+
+.section3 {
+  height: 240px;
+  background: #161f31;
+}
+
+.section4 {}
+
+.section5 {
+  background: #222c40;
+  position: relative;
+  padding-bottom:263px;
+}
+
+.section8 {
+  background: #161f32;
+}
+
+.section10 {
+  background: #161f32;
+}
+
+.service-list {
+  margin: 65px 0 80px;
+}
+
+.service-list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.service-list-item {
+  float: left;
+  margin-right: 50px;
+}
+
+.service-list-item>.item-heading {
+  position: relative;
+}
+
+.service-list-item>.item-heading:before {
+  content: "";
+  display: block;
+  width: 107px;
+  height: 107px;
+  /*css3 둥근 모서리 radius값을 - 50% 하면 원으로 된다*/
+  border-radius: 50%;
+  background: #3d506f;
+  margin: 0 auto 25px;
+}
+
+.service-list-item>.item-heading:after {
+  content: "";
+  display: block;
+  background: url(../images/icon_sprite.png) no-repeat;
+  position: absolute;
+  left: 50%;
+}
+
+.service-list-item:last-child {
+  margin-right: 0;
+}
+
+.service-list-item>.item-heading {
+  position: relative;
+  margin-bottom: 20px;
+  color: #3d506f;
+  font-size: 20px;
+}
+
+.service-list-item:nth-child(1)>.item-heading:after {
+  width: 39px;
+  height: 36px;
+  background-position: 0px 0px;
+  top: 40px;
+  margin-left: -20px;
+}
+
+.service-list-item:nth-child(2)>.item-heading:after {
+  width: 38px;
+  height: 39px;
+  background-position: -40px 0px;
+  top: 37px;
+  margin-left: -19px;
+}
+
+.service-list-item:nth-child(3)>.item-heading:after {
+  width: 40px;
+  height: 38px;
+  background-position: -80px 0px;
+  top: 37px;
+  margin-left: -20px;
+}
+
+.service-list-item:nth-child(4)>.item-heading:after {
+  width: 45px;
+  height: 44px;
+  background-position: -122px 0px;
+  top: 34px;
+  margin-left: -23px;
+}
+
+.item-paragraph {
+  line-height: 1.2;
+}
+
+.item-story {
+}
+
+.photo-list {
+  margin:85px 0 60px;
+}
+
+.photo-list:after {
+  content: "";
+  display: block;
+  clear:both;
+}
+
+.photo-list-item {
+  width: 255px;
+  float: left;
+  margin-right: 50px;
+}
+
+.photo-list-item:last-child {
+  margin-right: 0;
+}
+
+.photo-list-item>.item-photo {
+
+}
+
+.photo-list-item .item-photo-mask {
+  width: 220px;
+  height: 220px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin:0 auto;
+  cursor: pointer;
+}
+
+.photo-list-item .item-photo-mask:before {
+  content: "";
+  display: block;
+
+  width: 220px;
+  height: 220px;
+  background: #000;
+  /*투명도는 0~1 사이 실수 */
+  opacity: 0.8;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.photo-list-item .item-photo-mask:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  /*배경이미지 위치를 right bottom하면 우측 아래로 온다*/
+  background: url(../images/icon_sprite.png) no-repeat right bottom;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -29px 0 0 -29px;
+}
+
+.photo-list-item .item-photo-caption {
+  margin-top : 25px;
+}
+
+.photo-list-item .item-photo-name{
+  font-size:20px;
+  color:#fff;
+  font-weight:700;
+}
+
+.photo-list-item .item-photo-role{
+  color:#fff;
+  font-weight:300;
+  margin-top:10px;
+}
+
+.photo-list-item:nth-child(2) .item-story,
+.photo-list-item:nth-child(3) .item-story,
+.photo-list-item:nth-child(4) .item-story {
+  display:none;
+}
+
+.photo-list-item>.item-story{
+  width:100%;
+  height:263px;
+  background:#161f32;
   position:absolute;
-  top:59px;
-  right:53px;
-
-/*링크 롤오버시 마우스 커서 변경*/
-  cursor:pointer;
+  left:0;
+  bottom:0;
 }
