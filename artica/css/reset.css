@@ -27,10 +27,15 @@ time, mark, audio, video {
 	/*font-size: 100%;*/
 	/*font: inherit;*/
 	vertical-align: baseline;
-  font-size:15px;
-  color:#7f90a5;
+
+	/*
+	font-size:15px;
+	color:#7f90a5;
 	font-family: 'Lato', sans-serif;
 	font-weight:400;
+☆ font스타일의 우선순위를 바꿔주기위해 각각엘리먼트(line10~22) 직접 지정해주는 부분을 주석 처리하고 가장먼 엘리먼트인 body에게 적용하여 각 class에게 개별적 상속을 할 수 있도록 만든다. 
+	*/
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -39,6 +44,10 @@ footer, header, /* hgroup,*/ menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-size:15px;
+  color:#7f90a5;
+	font-family: 'Lato', sans-serif;
+	font-weight:400;
 }
 ol, ul {
 	list-style: none;

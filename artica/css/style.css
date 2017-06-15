@@ -95,6 +95,7 @@
 
 .heading-section {
   font-size: 30px;
+  font-weight: 400;
 }
 
 .heading-section.logo-type {
@@ -119,6 +120,17 @@
 
 .heading-section-sub.white {
   color: #fff;
+}
+
+.heading-section-sub2 {
+  font-size: 25px;
+  margin-bottom:23px;
+  color:#3d506f;
+  font-weight:400;
+}
+
+.heading-section-sub2.white {
+  color:#fff;
 }
 
 .hr-line {
@@ -193,6 +205,7 @@
   color: #fff;
   display: block;
   line-height: 53px;
+  text-align:center;
 }
 
 .btn-link.center {
@@ -218,8 +231,18 @@
   margin-top: 35px;
 }
 
+.mt65 {
+  margin-top: 65px;
+}
+
 .fc-white {
   color: #fff;
+}
+
+.clearfix:after{
+  content:"";
+  display:block;
+  clear:both;
 }
 
 .paragraph.italic {
@@ -443,11 +466,12 @@
   margin-top:10px;
 }
 
-.photo-list-item:nth-child(2) .item-story,
+/*겹쳐 보이는 부분을 작성하기 용이하도록 display:none 임시 적용*/
+/*.photo-list-item:nth-child(2) .item-story,
 .photo-list-item:nth-child(3) .item-story,
 .photo-list-item:nth-child(4) .item-story {
   display:none;
-}
+}*/
 
 .photo-list-item>.item-story{
   width:100%;
@@ -456,4 +480,382 @@
   position:absolute;
   left:0;
   bottom:0;
+  text-align:left;
+  padding:35px 0;
+  box-sizing:border-box;
+  color:#fff;
+}
+.photo-list-item>.item-story:before {
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  /*border을 이용한 삼각형 만들기*/
+  /*border-top:16px solid transparent;*/
+  border-right:16px solid transparent;
+  border-bottom:16px solid #161f32;
+  border-left:16px solid rgba(0,0,0,0);
+  position:absolute;
+  top:-16px;
+  left:50%;
+}
+
+.photo-list-item:nth-child(1)>.item-story:before{
+  margin-left:-480px;
+}
+.photo-list-item:nth-child(2)>.item-story:before{
+  margin-left:-170px;
+}
+.photo-list-item:nth-child(3)>.item-story:before{
+  margin-left:135px;
+}
+.photo-list-item:nth-child(4)>.item-story:before{
+  margin-left:440px;
+}
+
+.photo-list-item .item-story-heading {
+font-size:20px;
+font-weight:700;
+}
+
+.photo-list-item .item-story-paragraph{
+  line-height:1.2;
+  font-weight: 300;
+  margin-bottom:35px 0;
+}
+
+.photo-list-item .item-story-period {
+  margin-top:34px;
+}
+
+
+.photo-list-item .item-story-period:before{
+  content:"";
+  display:inline-block;
+
+  width:14px;
+  height:14px;
+  background:url(../images/icon_sprite.png) no-repeat -1px -120px;
+  margin-right:9px;
+  /*시계 아이콘을 글자 높이와 맞추기 위해 글자에게 line-height를 줄수도 있지만 아이콘에게 relative를 주고 좌표를 직접 주어 위치를 정해주는 방법도 있다.*/
+  position:relative;
+  top:2px;
+}
+
+.photo-list-item .item-story-birth {
+  margin-top:10px;
+}
+
+
+.photo-list-item .item-story-birth:before{
+  content:"";
+  display:inline-block;
+
+  width:13px;
+  height:12px;
+  background:url(../images/icon_sprite.png) no-repeat -17px -120px;
+  margin-right:9px;
+  /*시계 아이콘을 글자 높이와 맞추기 위해 글자에게 line-height를 줄수도 있지만 아이콘에게 relative를 주고 좌표를 직접 주어 위치를 정해주는 방법도 있다.*/
+  position:relative;
+  top:1px;
+}
+
+.btn-pop-close {
+  width: 14px;
+  height: 14px;
+  background: url(../images/btn_close.png) no-repeat;
+  border: 0;
+  text-indent: -9999px;
+  position: absolute;
+  /*원하는 박스에 relative를 주어 상대 위치를 정하는 방법도 있을 수 있으나 복잡해질 수 있으므로 left:50%를 주어 현 위치에서 절대 위치 값을 주어 위치를 고정 하는 방법을 쓸 수도 있다.*/
+  left:50%;
+  top:10px;
+  margin-left:calc(585px - 7px) ;
+  /*위 3줄로 중앙 위치를 고정하고 inner-box 넓이 1170의 반과 이미지 넓이 반을 뺀 값을을 마진 좌측(margin-left)으로 정하면 inner-box에 relative를 주지 않더라도 원하는 위치에 btn-pop-close를 고정 할 수 있다. */
+
+  /*링크 롤오버시 마우스 커서 변경*/
+  cursor: pointer;
+}
+
+.our-company {
+float:left;
+width:570px;
+text-align:left;
+}
+
+.our-skills {
+float:right;
+width:570px;
+text-align:left;
+}
+
+.skill-list-item {
+margin-bottom:8px;
+background:#aaa;
+}
+.skill-list-item:last-child {
+  margin-bottom:0;
+}
+
+.skill-list-item>.bar{
+  height:42px;
+  color:#fff;
+  line-height:42px;
+  background:#3d506f;
+  padding-left:16px;
+  box-sizing:border-box;
+}
+
+.skill-list-item>.bar.p93 {
+  width:93%
+}
+.skill-list-item>.bar.p90 {
+  width:90%
+}
+.skill-list-item>.bar.p85 {
+  width:85%
+}
+.skill-list-item>.bar.p80 {
+  width:80%
+}
+
+.career-wrap {
+  width:100%;
+  padding:63px 0;
+  background:#222c40;
+  margin-top:68px;
+}
+
+.career-list:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+
+.career-list-item {
+  float:left;
+  text-align:left;
+  color:#fff;
+  position:relative;
+  margin-right:160px;
+  /*last-child를 사용하지 않고 위와 같이 마지막 box mar right를 0으로 정의 한다.*/
+}
+
+
+
+
+.career-list-item:nth-child(1){
+  padding-left:87px;
+}
+.career-list-item:nth-child(2){
+  padding-left:87px;
+}
+.career-list-item:nth-child(3){
+  padding-left:68px;
+}
+.career-list-item:nth-child(4){
+  padding-left:79px;
+  margin-right:0px;
+  /*last-child를 사용하지 않고 위와 같이 마지막 box mar right를 0으로 정의 한다.*/
+}
+
+.career-list-item:before {
+  content:"";
+  display:block;
+  background:url(../images/icon_sprite.png) no-repeat;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.career-list-item:nth-child(1):before {
+width:77px;
+height:75px;
+background-position:0px -44px;
+}
+.career-list-item:nth-child(2):before {
+width:77px;
+height:75px;
+background-position:-78px -44px;
+}
+.career-list-item:nth-child(3):before {
+width:60px;
+height:75px;
+background-position:-155px -44px;
+}
+.career-list-item:nth-child(4):before {
+width:77px;
+height:75px;
+background-position:-220px -44px;
+}
+
+
+.career-number{
+  font-size:40px;
+  margin-bottom:10px;
+}
+.career-category {
+
+}
+
+.career-warp {
+  margin:120px 0;
+}
+
+.btn-filter {
+  height:36px;
+  padding:0 21px;
+  background:#3d506f;
+  color:#fff;
+  font-size:20px;
+  border:0;
+  margin-right:17px;
+}
+.btn-filter:last-child {
+  margin-right:0px;
+}
+
+.btn-filter.all {
+  background:skyblue;
+}
+
+.blog-list {
+  margin-bottom:120px;
+}
+
+.blog-list:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.blog-list-item {
+  margin-bottom:30px;
+}
+
+.blog-list-item.type1 {
+  width:570px;
+  height:300px;
+  float:left;
+}
+.blog-list-item:first-child{
+margin-right:30px;
+}
+.blog-list-item:last-child{
+  margin-left:30px;
+}
+/*가상 앨리먼트는 이웃간의 목록을 기준으로 하지 않고 부모의 자식 목록 위주로 하기때문에  .blog-list-item.type1:last-child 이라 하더라도 type4 2번째 에 적용된다*/
+
+
+.blog-list-item.type1>.blog-list-item-image {
+  width:285px;
+  height:300px;
+  float:left;
+  /*해당 float의 값에 clear을 해주지 않는 이유는 부모 block에 높이가 주어 졌기 때문에 필요가 없다.*/
+}
+.blog-list-item.type1>.blog-list-item-text  {
+  width:285px;
+  height:300px;
+  float:left;
+
+  padding:25px;
+  box-sizing:border-box;
+  /*해당 float의 값에 clear을 해주지 않는 이유는 부모 block에 높이가 주어 졌기 때문에 필요가 없다.*/
+}
+
+.blog-list-item.type2 {
+  width:770px;
+  height:300px;
+  float:left;
+
+}
+.blog-list-item.type2>.blog-list-item-text  {
+  height:300px;
+  padding:25px;
+  box-sizing:border-box;
+  /*해당 float의 값에 clear을 해주지 않는 이유는 부모 block에 높이가 주어 졌기 때문에 필요가 없다.*/
+}
+
+.blog-list-item.type3 {
+  width:370px;
+  height:630px;
+  float:right;
+}
+.blog-list-item.type3>.blog-list-item-image {
+  width:370px;
+  height:300px;
+  display:block;
+  /*img 태그가 인라인 요소일때 생기는 불필요한 여백을 제거하기 위해 display:block로 설정한다*/
+   /*위와 같은 경우 때문에 reset에서 기본 값으로 display:block로 설정해 놓는 경우도 있다*/
+}
+.blog-list-item.type3>.blog-list-item-text  {
+  height:330px;
+  padding:25px;
+  box-sizing:border-box;
+  /*해당 float의 값에 clear을 해주지 않는 이유는 부모 block에 높이가 주어 졌기 때문에 필요가 없다.*/
+}
+
+
+.blog-list-item.type4 {
+  width:370px;
+  height:300px;
+  float:left;
+}
+/*.blog-list-item.type4:nth-child(5){
+margin-right:30px;
+}*/
+
+
+.blog-list-item.type4>.blog-list-item-text  {
+  height:300px;
+  padding:25px;
+  box-sizing:border-box;
+  /*해당 float의 값에 clear을 해주지 않는 이유는 부모 block에 높이가 주어 졌기 때문에 필요가 없다.*/
+}
+
+.blog-list-item-text {
+  background:#161f32;
+  text-align:left;
+}
+
+.blog-list-item-text .author {
+  color:#fff;
+  margin-bottom: 20px;
+}
+.blog-list-item-text>.paragraph {
+line-height:1.2;
+}
+
+.email-wrap{
+  width:770px;
+  height:66px;
+  margin:70px auto;
+}
+.email-input {
+  width:573px;
+  height:66px;
+  padding:25px;
+  background:#3d506f;
+  box-sizing:border-box;
+  border:0;
+  /*input 태그에 폰트 종류는 직접 지정해줘야 함 폰트 상속이 되지 않는다.*/
+  font-family:lato, sans-serif;
+  font-size:20px;
+  font-weight:400;
+  display:block;
+  float:left;
+}
+
+.email-send {
+  width:172px;
+  height:66px;
+  background:#3d506f;
+  color:#fff;
+  border:0;
+  font-size:20px;
+  font-weight:400;
+  display:block;
+  float:right;
+
 }
